@@ -7,7 +7,7 @@ namespace example {
 
 class DemoActor : public Actor {
 public:
-    static Profile* cProfile;
+    static Profile* sProfile;
 
 public:
     DemoActor(const ActorCreateParam& param);
@@ -21,7 +21,7 @@ private:
     AnimModel* mModel;
 };
 
-Profile* DemoActor::cProfile = example::getRegistrar()->newProfile<DemoActor>("demo")
+Profile* DemoActor::sProfile = example::getRegistrar()->newProfile<DemoActor>("demo")
     .resources<"star_coin">(ProfileInfo::cResType_Course)
     .build();
 
