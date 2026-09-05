@@ -1,11 +1,8 @@
-#include <telkin/Print.h>
-#include <example/ExampleMod.h>
+#include <noboostmode/NoBoostMode.h>
 
-red::Registrar* example::getRegistrar() {
-    static red::Registrar sRegistrar("examplemod");
+red::Registrar* noboostmode::getRegistrar() {
+    static red::Registrar sRegistrar("noboostmode");
     return &sRegistrar;
 }
 
-void main() {
-    tk::println("Welcome to Example Mod");
-}
+void main() { }
